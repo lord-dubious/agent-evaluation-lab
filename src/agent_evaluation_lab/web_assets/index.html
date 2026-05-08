@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agent Evaluation Lab</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Cpath d='M14 42h36M14 32h20M14 22h28' stroke='%23f5c542' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <p class="eyebrow">local-first evals</p>
+        <h1>Agent Evaluation Lab</h1>
+        <p class="lede">Score agent outputs across correctness, safety, citations, tool use, latency, and cost.</p>
+        <div class="action-row">
+          <a href="/docs">API docs</a>
+          <button id="reset-demo" type="button">Reset demo</button>
+        </div>
+        <div class="suite-list" id="suite-list"></div>
+      </aside>
+
+      <main class="content">
+        <section class="hero-card">
+          <div>
+            <p class="eyebrow">evaluation control room</p>
+            <h2 id="hero-title">Loading evaluation suites</h2>
+            <p id="hero-copy">Preparing deterministic scoring fixtures.</p>
+          </div>
+          <div class="signal-ring">
+            <span id="average-score">--</span>
+            <small>avg score</small>
+          </div>
+        </section>
+
+        <section class="metrics-grid" id="metrics-grid"></section>
+
+        <section class="workspace">
+          <div class="panel">
+            <div class="panel-heading">
+              <p class="eyebrow">runs</p>
+              <h3>Agent comparisons</h3>
+            </div>
+            <div class="run-list" id="run-list"></div>
+          </div>
+
+          <div class="panel detail-panel">
+            <div class="panel-heading">
+              <p class="eyebrow">case drilldown</p>
+              <h3 id="detail-title">Select a run</h3>
+            </div>
+            <div id="detail-body" class="detail-body"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
